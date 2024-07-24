@@ -2,7 +2,7 @@
   <div class="mx-auto max-w-screen-xl px-4 py-10 lg:flex lg:items-center">
     <div class="mx-auto max-w-xl text-center">
       <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Online Marketplace.
+        Online Marketplace
         <strong class="font-extrabold text-blue-700 sm:block text-3xl"> Discover Quality Products Online Now. </strong>
       </h1>
 
