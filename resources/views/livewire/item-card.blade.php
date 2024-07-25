@@ -1,8 +1,10 @@
 <div class="bg-gray-100 shadow-sm rounded-lg hover:border border-blue-400 p-1">
+    
     <div>
         <img src="{{asset('images/1.jpg')}}" alt="product-images" class="rounded-t-lg object-cover" height="400px" width="400px">
     </div>
     <div>
+        <h2 class="line-clamp-1 px-3 font-medium">Product Title.</h2>
         <h2 class="line-clamp-2 px-3">It is a creative hub where imagination meets craftsmanship to transform ideas into tangible realities. At Preline Agency, we specialize in turning conceptual visions into concrete forms, whether it be through design, artistry, or technological innovation.</h2>
         <div class="flex justify-between px-3 py-2">
             <div class="bg-green-200 p-1 rounded-md">
@@ -24,3 +26,4 @@
         </div>
     </div>
 </div>
+
