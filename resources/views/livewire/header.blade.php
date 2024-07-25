@@ -14,6 +14,9 @@
       <nav aria-label="Global" class="hidden md:block">
         <ul class="flex items-center gap-6 text-sm">
           <li>
+            <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home</a>
+          </li>
+          <li>
             <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Explore More</a>
           </li>
 

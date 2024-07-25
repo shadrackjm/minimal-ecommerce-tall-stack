@@ -1,5 +1,5 @@
 <div class="bg-gray-100 shadow-sm rounded-lg hover:border border-blue-400 p-1">
-    
+    <a href="/product/details">
     <div>
         <img src="{{asset('images/1.jpg')}}" alt="product-images" class="rounded-t-lg object-cover" height="400px" width="400px">
     </div>
@@ -25,5 +25,6 @@
                 </a>
         </div>
     </div>
+    </a>
 </div>
 
