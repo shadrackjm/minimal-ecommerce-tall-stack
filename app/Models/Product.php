@@ -15,4 +15,8 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function scopeSearch($query, $value){
+        $query->where('name','like',"%{$value}%")->orWhere('description','like',"%{$value}%");
+}
 }

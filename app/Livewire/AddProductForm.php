@@ -30,11 +30,11 @@ class AddProductForm extends Component
             'product_name' => 'required',
             'photo' => 'image|required|mimes:jpg,png|max:1024',
             'product_description' => 'required',
-            'product_price' => 'required|integer',
+            'product_price' => 'required|numeric',
             'category_id' => 'required',
         ]);
 
-        $path = $this->photo->store('photos');
+        $path = $this->photo->store('public/photos');
 
         $product = new Product();
         $product->name = $this->product_name;
