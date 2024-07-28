@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://photos.app.goo.gl/ZT11GR7y973wXrSu8" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://photos.app.goo.gl/ZT11GR7y973wXrSu8" width="400" alt="Code with SJM Logo"></a></p>
 
 ---
 
