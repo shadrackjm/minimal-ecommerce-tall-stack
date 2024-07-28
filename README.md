@@ -1,7 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Here’s a simple documentation outline for your GitHub repo's README:
-
 ---
 
 # Build a Minimal E-commerce App with Laravel 11 and Livewire 3 | TALL Stack
@@ -64,10 +62,6 @@ Welcome to the Minimal E-commerce App project! This guide will walk you through 
 ## Conclusion
 This project aims to provide a comprehensive guide for building a minimal e-commerce app using the TALL stack. Each step is designed to be straightforward and provide practical knowledge for developing modern web applications.
 
-## Contributions
-Feel free to contribute to this project by submitting issues or pull requests. Let's build something great together!
-
 ---
 
-This outline provides a clear structure for your documentation, detailing what has been completed and what remains to be done. It also offers a logical progression for anyone following along with the project.
 
