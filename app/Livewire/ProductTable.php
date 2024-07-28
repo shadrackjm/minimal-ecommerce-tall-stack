@@ -15,6 +15,7 @@ class ProductTable extends Component
     public $sortBy = 'created_at';
     public $sortDir = 'DESC';
     public $search = '';
+    public $currentUrl;
 
     public function setSortBy($sortColum){
         if ($this->sortBy == $sortColum) {
@@ -27,6 +28,11 @@ class ProductTable extends Component
     }
     public function render()
     {
+        $current_url = url()->current();
+        $explode_url = explode('/',$current_url);
+        
+        $this->currentUrl = $explode_url[3];
+
         return view('livewire.product-table',[
             'products' => Product::with('category')->search($this->search)
             ->orderBy($this->sortBy,$this->sortDir)
