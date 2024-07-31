@@ -29,15 +29,38 @@ class EditProduct extends Component
         $this->all_categories = Category::all();
     }
     public function update(){
+        //validation 
+        $this->validate([
+            'product_name' => 'required|string|max:255',
+            'product_description' => 'required|string',
+            'product_price' => 'required|numeric',
+            'category_id' => 'required|exists:categories,id',
+            'photo' => 'nullable|image|max:1024', // Validate the photo
+        ]);
+        //check if the image update/uploaded
+        if ($this->photo && !is_string($this->photo)) {
+            $photoPath = $this->photo->store('photos', 'public');
+        } else {
+            $photoPath = $this->photo; // Keep the old image path
+        }
 
+        $this->product_details->update([
+            'name' => $this->product_name,
+            'description' => $this->product_description,
+            'price' => $this->product_price,
+            'category_id' => $this->category_id,
+            'image' => $photoPath,
+        ]);
+
+        return $this->redirect('/products', navigate: true);
     }
     public function render()
     {
-        $current_url = url()->current();
+        // $current_url = url()->current();
         
-        $explode_url = explode('/',$current_url);
-        // dd($explode_url);
-        $this->currentUrl = $explode_url[3].' '.$explode_url[5];
+        // $explode_url = explode('/',$current_url);
+        // // dd($explode_url);
+        // $this->currentUrl = $explode_url[3].' '.$explode_url[5];
 
         return view('livewire.edit-product')->layout('admin-layout');
     }

@@ -1,5 +1,5 @@
 <div>
-    <livewire:bread-crumb :url="$currentUrl" />
+    {{-- <livewire:bread-crumb :url="$currentUrl" /> --}}
     <!-- Card Section -->
     <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <!-- Card -->
@@ -77,11 +77,13 @@
                     <!-- End Col -->
 
                     <div class="sm:col-span-9">
-					@if ($photo) 
-						<img src="{{ Storage::url($photo) }}" alt="default image" height="300px" width="300px" class="rounded-lg">
-					@else
-						<img src="{{ $photo->temporaryUrl() }}" alt="Product image" height="300px" width="300px" class="rounded-lg">
-					@endif
+                        @if ($photo && is_string($photo))
+                            <img src="{{ Storage::url($photo) }}" alt="Product image" height="300px" width="300px" class="rounded-lg">
+                        @elseif ($photo)
+                            <img src="{{ $photo->temporaryUrl() }}" alt="Product image" height="300px" width="300px" class="rounded-lg">
+                        @else
+                            <img src="{{ asset('default-image.jpg') }}" alt="default image" height="300px" width="300px" class="rounded-lg">
+                        @endif
 					</div>
                     <!-- End Col -->
                     <div class="sm:col-span-3">

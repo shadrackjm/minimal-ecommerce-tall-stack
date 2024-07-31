@@ -26,6 +26,14 @@ class ProductTable extends Component
         $this->sortBy = $sortColum;
         $this->sortDir = 'ASC';
     }
+
+    public function delete($id){
+        $product = Product::find($id);
+
+        $product->delete();
+
+        return $this->redirect('/products', navigate: true);
+    }
     public function render()
     {
         $current_url = url()->current();

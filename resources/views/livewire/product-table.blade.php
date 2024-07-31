@@ -109,14 +109,14 @@
 							  </td>
 							  <td class="size-px whitespace-nowrap">
 								<div class="px-6 py-1.5">
-								  <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="edit/{{$product->id}}/product">
+								  <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="edit/{{$product->id}}/product">
 									Edit
 								  </a>
 								</div>
 							  </td>
 							  <td class="size-px whitespace-nowrap">
 								<div class="px-6 py-1.5">
-								  <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="">
+								  <a wire:navigate wire:click="delete({{$product->id}})" wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE" class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="">
 									Delete
 								  </a>
 								</div>
