@@ -85,7 +85,7 @@
 							  </td>
 							  <td >
 								<div class="px-6 py-3">
-								  <span class="block text-sm  text-gray-800 dark:text-neutral-200">{{ str($product->description)->words(10)}}</span>
+								  <span class="block text-sm  text-gray-800 dark:text-neutral-200">{{ str($product->description)->words(8)}}</span>
 								</div>
 							  </td>
 							  <td class="size-px whitespace-nowrap">
