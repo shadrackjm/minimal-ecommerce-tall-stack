@@ -8,6 +8,7 @@ use App\Livewire\ManageCategories;
 use App\Livewire\ManageOrders;
 use App\Livewire\ManageProduct;
 use App\Livewire\ProductDetails;
+use App\Livewire\ShoppingCartComponent;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/product/{product_id}/details',ProductDetails::class);
+
+Route::get('/shopping-cart',ShoppingCartComponent::class)->name('shopping-cart');
 
 Route::group(['middleware' => 'admin'], function(){
     Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');
