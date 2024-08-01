@@ -14,22 +14,19 @@
       <nav aria-label="Global" class="hidden md:block">
         <ul class="flex items-center gap-6 text-sm">
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home</a>
+            <a class="text-gray-500 {{Request::is('/') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/"> Home</a>
           </li>
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Explore More</a>
-          </li>
-
-          <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75" href="#">  About  </a>
+            <a class="text-gray-500 {{Request::is('all/products') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/all/products"> Explore More</a>
           </li>
 
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Contancts </a>
+            <a class="text-gray-500 {{Request::is('about') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/about">  About  </a>
           </li>
 
-
-          
+          <li>
+            <a class="text-gray-500 {{Request::is('contacts') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/contacts"> Contacts </a>
+          </li>
         </ul>
       </nav>
 
