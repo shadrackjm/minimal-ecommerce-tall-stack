@@ -14,6 +14,8 @@ class ShoppingCartComponent extends Component
     public $discount;
     public $total;
 
+    public $pageTitle = '';
+
     protected $listeners = [
         'cartUpdated' => 'render',
     ];
@@ -88,6 +90,6 @@ class ShoppingCartComponent extends Component
 
         return view('livewire.shopping-cart-component', [
             'cartItems' => $this->cartItems
-        ]);
+        ])->title('E-commerce | Shopping cart');
     }
 }
