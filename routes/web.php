@@ -29,7 +29,7 @@ Route::get('/contacts',Contacts::class);
 Route::get('/shopping-cart',ShoppingCartComponent::class)->name('shopping-cart');
 
 Route::group(['middleware' => 'admin'], function(){
-    Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');
+    Route::get('/admin/dashboard', ManageProduct::class)->name('dashboard');
 
     Route::get('/products',ManageProduct::class)->name('products');
 
