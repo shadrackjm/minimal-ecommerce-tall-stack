@@ -14,15 +14,15 @@ use App\Livewire\ProductDetails;
 use App\Livewire\ManageCategories;
 use App\Livewire\ShoppingCartComponent;
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('/');
 
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');
 
-// Route::view('profile', 'profile')
-//     ->middleware(['auth'])
-//     ->name('profile');
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
 
 Route::get('/product/{product_id}/details',ProductDetails::class);
 

@@ -11,8 +11,6 @@ class AdminDashboard extends Component
     public $currentUrl;
     public function render()
     {
-
-        
         $current_url = url()->current();
         $explode_url = explode('/',$current_url);
         
