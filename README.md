@@ -12,7 +12,7 @@ Welcome to the Minimal E-commerce App project! This guide will walk you through 
 - **Setting up the development environment**
 - **Designing the landing page with Tailwind CSS & hyper-ui**
 - **Creating models, relationships, and migrations for products, categories, and users**
-- **Setting up authentication with DevDojo Auth Package**
+- **Setting up authentication with Laravel Breeze Starter kit**
 - **Building the product listing & product detail page**
 - **Building the product CRUD operations with Livewire components (admin)**
 - **Implementing the shopping cart with Livewire**
@@ -27,7 +27,7 @@ Welcome to the Minimal E-commerce App project! This guide will walk you through 
 - Integrate Tailwind CSS
 
 ### 2. Setting up Authentication with DevDojo Auth Package
-- Install the DevDojo Auth package
+- Install the Laravel Breeze Starter kit
 - Configure authentication routes and views
 
 ### 3. Designing the Landing Page with Tailwind CSS & hyper-ui
