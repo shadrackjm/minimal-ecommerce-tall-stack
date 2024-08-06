@@ -21,7 +21,7 @@
 			@else
 				<a
 				class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-				href="/auth/login"
+				href="/login"
 				>
 				Get Started
 				</a>

@@ -6,21 +6,21 @@
 		<div class="flex flex-col">
 		  <div class="-m-1.5 overflow-x-auto">
 			<div class="p-1.5 min-w-full inline-block align-middle">
-			  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-neutral-800 dark:border-neutral-700">
+			  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
 				<!-- Header -->
-				<div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
+				<div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200">
 				  <div>
-					<h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+					<h2 class="text-xl font-semibold text-gray-800">
 					  Product
 					</h2>
-					<p class="text-sm text-gray-600 dark:text-neutral-400">
+					<p class="text-sm text-gray-600">
 					  Add Product, edit and more.
 					</p>
 				  </div>
 	  
 					<div class="inline-flex gap-x-2">
 					<div class="max-w-md space-y-3">
-						<input type="search" wire:model.live.debounce.300="search" class="peer py-3 px-4 block w-full bg-gray-100 border-blue-500 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Search Product">
+						<input type="search" wire:model.live.debounce.300="search" class="peer py-3 px-4 block w-full bg-gray-100 border-blue-500 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Search Product">
 					</div>
 	  
 					  <a wire:navigate class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="/add/product">
@@ -32,8 +32,8 @@
 				<!-- End Header -->
 	  
 				<!-- Table -->
-				<table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-				  <thead class="bg-gray-50 dark:bg-neutral-800  px-5">
+				<table class="min-w-full divide-y divide-gray-200">
+				  <thead class="bg-gray-50  px-5">
 					<tr>
 	  
 					  @include('livewire.theaders.th',[
@@ -65,7 +65,7 @@
 					</tr>
 				  </thead>
 	  
-				  <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+				  <tbody class="divide-y divide-gray-200">
 					  @if (count($products) > 0)
 						  @foreach ($products as $product)
 						  <tr wire:key="{{$product->id}}">
@@ -76,7 +76,7 @@
 									  
 										  <img class="inline-block size-[38px] rounded-full" src="{{ Storage::url($product->image)}}" alt="Avatar">
 										  <div class="grow">
-											  <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">{{str($product->name)->words(3)}}</span>
+											  <span class="block text-sm font-semibold text-gray-800">{{str($product->name)->words(3)}}</span>
 										  </div>
 									  </div>
 								  </a>
@@ -85,7 +85,7 @@
 							  </td>
 							  <td >
 								<div class="px-6 py-3">
-								  <span class="block text-sm  text-gray-800 dark:text-neutral-200">{{ str($product->description)->words(8)}}</span>
+								  <span class="block text-sm  text-gray-800">{{ str($product->description)->words(8)}}</span>
 								</div>
 							  </td>
 							  <td class="size-px whitespace-nowrap">
@@ -97,26 +97,26 @@
 							  </td>
 							  <td class="size-px whitespace-nowrap">
 								  <div class="px-6 py-3">
-									  <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+									  <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
 										  {{$product->category->name}}
 									  </span>
 								  </div>
 								</td>
 							  <td class="size-px whitespace-nowrap">
 								<div class="px-6 py-3">
-								  <span class="text-sm text-gray-500 dark:text-neutral-500">{{ date('D M Y, H:i',strtotime($product->created_at))}}</span>
+								  <span class="text-sm text-gray-500">{{ date('D M Y, H:i',strtotime($product->created_at))}}</span>
 								</div>
 							  </td>
 							  <td class="size-px whitespace-nowrap">
 								<div class="px-6 py-1.5">
-								  <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="edit/{{$product->id}}/product">
+								  <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="edit/{{$product->id}}/product">
 									Edit
 								  </a>
 								</div>
 							  </td>
 							  <td class="size-px whitespace-nowrap">
 								<div class="px-6 py-1.5">
-								  <a wire:navigate wire:click="delete({{$product->id}})" wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE" class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="">
+								  <a wire:navigate wire:click="delete({{$product->id}})" wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE" class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="">
 									Delete
 								  </a>
 								</div>
@@ -127,7 +127,7 @@
 						  <tr>
 							  <td class="size-px whitespace-nowrap" colspan="5">
 								  <div class="px-6 py-3">
-									<span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+									<span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
 									  No Data Found!
 									</span>
 								  </div>
@@ -139,7 +139,7 @@
 				<!-- End Table -->
 	  
 				<!-- Footer -->
-				<div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-neutral-700">
+				<div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
 				  <div class="flex gap-2">
 					<label class="w-32 text-sm font-medium text-gray-900">Per Page</label>
 					  <select wire:model.live='perPage'

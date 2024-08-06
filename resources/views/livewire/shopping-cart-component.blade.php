@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-3xl">
       <header class="text-center flex gap-3">
         <h1 class="text-xl font-bold text-gray-900 sm:text-3xl">Your Cart</h1>
-        <div wire:loading class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-white-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
+        <div wire:loading class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-white-600 rounded-full" role="status" aria-label="loading">
           <span class="sr-only">Loading...</span>
         </div>
       </header>
