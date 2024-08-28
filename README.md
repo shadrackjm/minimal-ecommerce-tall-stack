@@ -51,13 +51,6 @@ Welcome to the Minimal E-commerce App project! This guide will walk you through 
 - Create a shopping cart component
 - Handle adding, updating, and removing items
 
-### 8. Order Creation by Customer
-- Implement order creation process
-- Handle order validation and storage
-
-### 9. Implementing Order Management for the Admin Dashboard
-- Create admin components for managing orders
-- Display order statuses and details
 
 ## Conclusion
 This project aims to provide a comprehensive guide for building a minimal e-commerce app using the TALL stack. Each step is designed to be straightforward and provide practical knowledge for developing modern web applications.
